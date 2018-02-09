@@ -1,9 +1,13 @@
 function inner_load()
   type = {nucleus = {img = "nucleus", cut = true, w = 1024, h = 1024, txt = text[4]}, rougher = {img = "rougher", w = 1282, h = 806, txt = text[5]}, smoother = {img = "smoother", w = 1106, h = 656, txt = text[6]}, golgi = {img = "golgi", w = 982, h = 822, txt = text[7]},
-  cvacuole = {img = "cvacuole", w = 1564, h = 1086, txt = text[8]}, vacuole = {img = "vacuole", w = 714, h =542, txt = text[9]}, chloroplast = {img = "chloroplast", cut = true, w = 596, h = 474, txt = text[10]}, mitochondrion = {img = "mitochondrion", cut = true, w = 346, h = 522, txt = text[11]}}
+  cvacuole = {img = "cvacuole", w = 1564, h = 1086, txt = text[8]}, vacuole = {img = "vacuole", w = 714, h =542, txt = text[9]}, chloroplast = {img = "chloroplast", cut = true, w = 596, h = 474, txt = text[10]}, mitochondrion = {img = "mitochondrion", cut = true, w = 346, h = 522, txt = text[11]},
+  ribosome = {img = "ribosome", w = 42, h = 42, txt = text[12]}, skeleton = {img = "cytoskeleton", w = 256, h = 42, txt = text[13]}, vesicle = {img = "vesicle", w = 80, h = 80, txt = text[14]}, peroxisome = {img = "peroxisome", w = 200, h = 186, txt = text[15]},
+  lysosome = {img = "lysosome", w = 200, h = 186, txt = text[16]}}
 
   organelles = {{x = 800, y = 600, a = 255, type = "nucleus"}, {x = 760, y = 850, type = "rougher"}, {x = 750, y = 1050, type = "smoother"}, {x = 1340, y = 1040, a = 255, type = "chloroplast"}, {x = 1160, y = 1280, type = "golgi"}, {x = 300, y = 800, a = 255, type = "chloroplast"},
-  {x = 220, y = 1020, a = 255, type = "mitochondrion"}, {x = 520, y = 1280, type = "cvacuole"}, {x = 1240, y = 780, type = "vacuole"}, {x = 1100, y = 1000, a = 255, type = "mitochondrion"}}
+  {x = 220, y = 1020, a = 255, type = "mitochondrion"}, {x = 520, y = 1280, type = "cvacuole"}, {x = 1240, y = 780, type = "vacuole"}, {x = 1100, y = 1000, a = 255, type = "mitochondrion"}, {x = 1084, y = 614, type = "ribosome"}, {x = 1220, y = 918, type = "ribosome"},
+  {x = 1084, y = 614, type = "ribosome"}, {x = 440, y = 896, type = "ribosome"}, {x = 1434, y = 1282, type = "ribosome"}, {x = 146, y = 1280, type = "ribosome"}, {x = 376, y = 946, r = -30, type = "skeleton"}, {x = 396, y = 1006, r = -15, type = "skeleton"},
+  {x = 1118, y = 812, r = 45, type = "skeleton"}, {x = 444, y = 670, r = 0, type = "skeleton"}, {x = 1384, y = 1192, type = "vesicle"}, {x = 1436, y = 898, type = "vesicle"}, {x = 970, y = 1508, type = "vesicle"}, {x = 800, y = 1600, type = "lysosome"}, {x = 886, y = 1214, type = "peroxisome"}}
 
   target = 0
 end
@@ -31,7 +35,11 @@ function inner_draw()
       love.graphics.draw(img[type[v.type].img.."1"], v.x, v.y, 0, .5, .5, type[v.type].w/2, type[v.type].h/2)
     else
       love.graphics.setColor(255, 255, 255, 255)
-      love.graphics.draw(img[type[v.type].img], v.x, v.y, 0, .5, .5, type[v.type].w/2, type[v.type].h/2)
+      if v.r then
+        love.graphics.draw(img[type[v.type].img], v.x, v.y, math.rad(v.r), .5, .5, type[v.type].w/2, type[v.type].h/2)
+      else
+        love.graphics.draw(img[type[v.type].img], v.x, v.y, 0, .5, .5, type[v.type].w/2, type[v.type].h/2)
+      end
     end
   end
 end

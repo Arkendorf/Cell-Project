@@ -50,6 +50,7 @@ function love.draw()
   else
     layers_printinfo()
   end
+  love.graphics.print(tostring(mouse.tx)..", "..tostring(mouse.ty), 0, 16)
 end
 
 function love.mousepressed(x, y, button)
