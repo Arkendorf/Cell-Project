@@ -1,6 +1,6 @@
 function camera_load()
   screen = {w = love.graphics.getWidth(), h = love.graphics.getHeight()}
-  camera = {x = 0, y = 0, zoom = 1, zoomV = 0}
+  camera = {x = 800, y = 1000, zoom = .25, zoomV = 0}
   camera_pan = {x = 0, y = 0, w = 0, h = 0}
 end
 
