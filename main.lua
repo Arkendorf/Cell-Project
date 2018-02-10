@@ -1,6 +1,7 @@
 require "camera"
 require "mouse"
 require "graphics"
+require "info"
 require "layers"
 require "inner"
 require "gui"
@@ -10,13 +11,8 @@ function love.load()
   love.graphics.setBackgroundColor(238, 238, 238)
   -- love.window.setFullscreen(true)
 
-  -- load text
-  text = {}
-  for line in love.filesystem.lines("text.txt") do
-    text[#text+1] = line
-  end
-
   load_imgs()
+  load_txts()
   mouse_load()
   camera_load()
   layers_load()

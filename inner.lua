@@ -1,8 +1,8 @@
 function inner_load()
-  type = {nucleus = {cut = true, w = 1024, h = 1024, txt = text[4]}, rougher = {w = 1282, h = 806, txt = text[5]}, smoother = {w = 1106, h = 656, txt = text[6]}, golgi = {w = 982, h = 822, txt = text[7]},
-  cvacuole = {w = 1564, h = 1086, txt = text[8]}, vacuole = {w = 714, h =542, txt = text[9]}, chloroplast = {cut = true, w = 596, h = 474, txt = text[10]}, mitochondrion = {cut = true, w = 346, h = 522, txt = text[11]},
-  ribosome = {w = 42, h = 42, txt = text[12]}, skeleton = {w = 256, h = 42, txt = text[13]}, vesicle = {w = 80, h = 80, txt = text[14]}, peroxisome = {w = 200, h = 186, txt = text[15]},
-  lysosome = {w = 200, h = 186, txt = text[16]}}
+  type = {nucleus = {cut = true, w = 1024, h = 1024}, rougher = {w = 1282, h = 806}, smoother = {w = 1106, h = 656}, golgi = {w = 982, h = 822},
+  cvacuole = {w = 1564, h = 1086}, vacuole = {w = 714, h =542}, chloroplast = {cut = true, w = 596, h = 474}, mitochondrion = {cut = true, w = 346, h = 522},
+  ribosome = {w = 42, h = 42}, skeleton = {w = 256, h = 42}, vesicle = {w = 80, h = 80}, peroxisome = {w = 200, h = 186},
+  lysosome = {w = 200, h = 186}}
 
   organelles = {{x = 800, y = 600, a = 255, a2 = 255, type = "nucleus"}, {x = 760, y = 850, a = 255, type = "rougher"}, {x = 750, y = 1050, a = 255, type = "smoother"}, {x = 1340, y = 1040, a = 255, a2 = 255, type = "chloroplast"},
   {x = 1160, y = 1280, a = 255, type = "golgi"}, {x = 300, y = 800, a = 255, a2 = 255, type = "chloroplast"}, {x = 220, y = 1020, a = 255, a2 = 255, type = "mitochondrion"}, {x = 520, y = 1280, a = 255, type = "cvacuole"},
@@ -10,6 +10,7 @@ function inner_load()
   {x = 1084, y = 614, a = 255, type = "ribosome"}, {x = 440, y = 896, a = 255, type = "ribosome"}, {x = 1434, y = 1282, a = 255, type = "ribosome"}, {x = 146, y = 1280, a = 255, type = "ribosome"}, {x = 376, y = 946, a = 255, r = -30, type = "skeleton"},
   {x = 396, y = 1006, a = 255, r = -15, type = "skeleton"}, {x = 1118, y = 812, a = 255, r = 45, type = "skeleton"}, {x = 444, y = 670, a = 255, r = 0, type = "skeleton"}, {x = 1384, y = 1192, a = 255, type = "vesicle"},
   {x = 1436, y = 898, a = 255, type = "vesicle"}, {x = 970, y = 1508, a = 255, type = "vesicle"}, {x = 800, y = 1600, a = 255, type = "lysosome"}, {x = 886, y = 1214, a = 255, type = "peroxisome"}}
+  table.sort(organelles, function(a, b) return a.y < b.y end)
 
   target = 0
 end
@@ -40,7 +41,9 @@ end
 
 function inner_mousepressed(x, y, button)
   if button == 1 then
-    for i, v in ipairs(organelles) do
+    for i = #organelles, 1, -1 do
+      local v = organelles[i]
+
       local w = type[v.type].w/4
       local h = type[v.type].h/4
       if mouse.tx > v.x - w and mouse.tx < v.x + w and mouse.ty > v.y - h and mouse.ty < v.y + h then
@@ -74,5 +77,5 @@ end
 
 
 function inner_info()
-  return type[organelles[target].type].txt
+  return txt[organelles[target].type]
 end

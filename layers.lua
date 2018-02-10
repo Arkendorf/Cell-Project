@@ -1,6 +1,6 @@
 function layers_load()
   level = 3
-  layers = {{a = 255, txt = text[3]}, {a = 255, txt = text[2]}, {a = 255, txt = text[1]}}
+  layers = {{a = 255}, {a = 255}, {a = 255}}
 end
 
 function layers_update(dt)
@@ -29,5 +29,5 @@ function layers_draw()
 end
 
 function layers_info()
-  return layers[level].txt
+  return txt[tostring(level)]
 end
