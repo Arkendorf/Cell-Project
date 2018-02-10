@@ -10,8 +10,6 @@ function inner_load()
   {x = 1084, y = 614, a = 255, type = "ribosome"}, {x = 440, y = 896, a = 255, type = "ribosome"}, {x = 1434, y = 1282, a = 255, type = "ribosome"}, {x = 146, y = 1280, a = 255, type = "ribosome"}, {x = 376, y = 946, a = 255, r = -30, type = "skeleton"},
   {x = 396, y = 1006, a = 255, r = -15, type = "skeleton"}, {x = 1118, y = 812, a = 255, r = 45, type = "skeleton"}, {x = 444, y = 670, a = 255, r = 0, type = "skeleton"}, {x = 1384, y = 1192, a = 255, type = "vesicle"},
   {x = 1436, y = 898, a = 255, type = "vesicle"}, {x = 970, y = 1508, a = 255, type = "vesicle"}, {x = 800, y = 1600, a = 255, type = "lysosome"}, {x = 886, y = 1214, a = 255, type = "peroxisome"}}
-  table.sort(organelles, function(a, b) return a.y < b.y end)
-
   target = 0
 end
 

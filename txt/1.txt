@@ -1,3 +1,5 @@
-Well this is a test of new text system.
+Inner Cell
 
-Newline?
+The inner cell contains organelles, structures that act like little organs and perform wide variety of functions. If you think of the cell as a factory, the organelles are specialized machinery. They follow instructions from the nucleus and produce products.
+
+The inner cell is filled with cytoplasm, a gel-like substance that holds everything in the cell. However, it is “stormy” in the cytoplasm, so all the factory work has to be done indoors, or in the organelles.

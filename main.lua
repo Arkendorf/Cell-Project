@@ -9,7 +9,7 @@ require "gui"
 function love.load()
   -- set up window
   love.graphics.setBackgroundColor(238, 238, 238)
-  -- love.window.setFullscreen(true)
+  love.window.setFullscreen(true)
 
   load_imgs()
   load_txts()

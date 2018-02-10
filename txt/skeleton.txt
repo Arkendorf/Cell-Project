@@ -1,0 +1,7 @@
+Cytoskeleton
+
+The cytoskeleton is a network of protein filaments that give cells their shape and internal organization.
+
+Microfilaments are threadlike structures made of actin. They form networks that create a framework that supports the cell, and help it move. While they are extremely small, microfilaments are surprisingly strong, making them ideal for supporting the cell’s structure.
+
+Microtubules are hollow structures made up of proteins known as tubelines. They are responsible for maintaining cell shape, like girders in a building. Microtubules can also be used as transport pipes, acting as little tubes that can transport material across and out of the cell.
