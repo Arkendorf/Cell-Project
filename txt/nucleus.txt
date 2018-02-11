@@ -4,6 +4,6 @@ The nucleus is a large membrane-enclosed structure that contains genetic materia
 
 The outside of the nucleus is known as the nuclear membrane. Along with the cell membrane, it is a lipid bilayer, and is responsible for protecting the inside of the nucleus. The nuclear membrane also contains many holes on the outside called pores, which allow material to enter and exit the nucleus.
 
-The inside of the nucleus contains chromatin, squiggly strands of uncoiled DNA in nucleus with associated proteins. Chromatin is what chromosomes, are formed of, which dictate our whole body’s appearance.
+The inside of the nucleus contains chromatin, squiggly strands of uncoiled DNA in the nucleus with associated proteins. Chromatin is what chromosomes are formed of, which dictate our whole body’s appearance.
 
 In the center of the nucleus is the nucleolus. Nucleoli are small spherical structures responsible for creating ribosomes.

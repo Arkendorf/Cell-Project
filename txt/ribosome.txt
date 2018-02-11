@@ -1,3 +1,3 @@
 Ribosome
 
-Ribosomes are small particles of RNA and protein found throughout the cytoplasm that receive instructions from RNA and assemble proteins. Ribosomes are also found on the rough endoplasmic reticulum, and are what make it appear “rough” under a microscope. If a cell is a factory, and ribosomes are the machines on the assembly line, building proteins.
+Ribosomes are small particles of RNA and protein found throughout the cytoplasm that receive instructions from RNA and assemble proteins. Ribosomes are also found on the rough endoplasmic reticulum, and are what make it appear “rough” under a microscope. If a cell is a factory, ribosomes are the machines on the assembly line, building proteins.

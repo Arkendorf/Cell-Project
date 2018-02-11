@@ -1,6 +1,6 @@
 Cytoskeleton
 
-The cytoskeleton is a network of protein filaments that give cells their shape and internal organization.
+The cytoskeleton is a network of protein filaments that give cells their shape and internal organization The cytoskeleton is composed of both microfilaments and microtubules.
 
 Microfilaments are threadlike structures made of actin. They form networks that create a framework that supports the cell, and help it move. While they are extremely small, microfilaments are surprisingly strong, making them ideal for supporting the cell’s structure.
 
